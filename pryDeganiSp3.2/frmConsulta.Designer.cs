@@ -33,7 +33,6 @@
             lblOrigen = new Label();
             rdbNacional = new RadioButton();
             rdbInternacional = new RadioButton();
-            btnConsultar = new Button();
             lstResultados = new ListBox();
             SuspendLayout();
             // 
@@ -54,7 +53,6 @@
             cmbConsulta.Name = "cmbConsulta";
             cmbConsulta.Size = new Size(121, 23);
             cmbConsulta.TabIndex = 1;
-            cmbConsulta.SelectedIndexChanged += this.cmbConsulta_SelectedIndexChanged;
             // 
             // lblOrigen
             // 
@@ -86,22 +84,12 @@
             rdbInternacional.TabStop = true;
             rdbInternacional.Text = "Internacional";
             rdbInternacional.UseVisualStyleBackColor = true;
-            rdbInternacional.CheckedChanged += this.radioButton2_CheckedChanged;
-            // 
-            // btnConsultar
-            // 
-            btnConsultar.Location = new Point(157, 201);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(98, 35);
-            btnConsultar.TabIndex = 5;
-            btnConsultar.Text = "Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
             // 
             // lstResultados
             // 
             lstResultados.FormattingEnabled = true;
             lstResultados.ItemHeight = 15;
-            lstResultados.Location = new Point(12, 251);
+            lstResultados.Location = new Point(12, 202);
             lstResultados.Name = "lstResultados";
             lstResultados.Size = new Size(243, 64);
             lstResultados.TabIndex = 6;
@@ -110,9 +98,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(287, 341);
+            ClientSize = new Size(287, 286);
             Controls.Add(lstResultados);
-            Controls.Add(btnConsultar);
             Controls.Add(rdbInternacional);
             Controls.Add(rdbNacional);
             Controls.Add(lblOrigen);
@@ -131,7 +118,6 @@
         private Label lblOrigen;
         private RadioButton rdbNacional;
         private RadioButton rdbInternacional;
-        private Button btnConsultar;
         private ListBox lstResultados;
     }
 }

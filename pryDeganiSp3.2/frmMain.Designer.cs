@@ -39,6 +39,7 @@
             lblPrecio = new Label();
             txtPrecio = new TextBox();
             btnAgregar = new Button();
+            btnConsultar = new Button();
             SuspendLayout();
             // 
             // cmbMarca
@@ -130,18 +131,30 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(178, 334);
+            btnAgregar.Location = new Point(84, 336);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(86, 35);
             btnAgregar.TabIndex = 10;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
+            // 
+            // btnConsultar
+            // 
+            btnConsultar.Location = new Point(178, 336);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(98, 35);
+            btnConsultar.TabIndex = 11;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(288, 383);
+            Controls.Add(btnConsultar);
             Controls.Add(btnAgregar);
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
@@ -155,6 +168,7 @@
             Controls.Add(cmbMarca);
             Name = "frmMain";
             Text = "Repuestos Ingresados";
+            Load += frmMain_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,5 +186,6 @@
         private Label lblPrecio;
         private TextBox txtPrecio;
         private Button btnAgregar;
+        private Button btnConsultar;
     }
 }
